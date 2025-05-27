@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+  </head>
+  <body>
+    <main class="wrapper">
+      <article>
+        <div class="article-picture">
+          <div class="container">
+            <img src="images/drawers.jpg" alt="drawers-picture" />
+          </div>
+        </div>
+        <div class="article-content">
+          <div class="text">
+            <h1 class="text-1">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p class="text-2 medium">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          </div>
+          
+          <footer>
+            <div class="sharing-banner">
+              <div class="icons">
+                <span class="share text-3 medium">SHARE</span>
+                <img src="images/icon-facebook.svg" alt="">
+                <img src="images/icon-twitter.svg" alt="">
+                <img src="images/icon-pinterest.svg" alt="">
+              </div>
+              
+              
+              <div id="share1" class="share-btn">
+                <div>
+                  <img src="images/icon-share.svg" alt="share">
+                </div>
+             </div>
+            </div>
+            <div class="triangle">
+              <div class="inside">
+                <div></div>
+              </div>
+            </div>
+
+            <div class="footer-content">
+              <div class="author">
+               <img src="images/avatar-michelle.jpg" />
+               <div>
+                  <strong class="text-2 bold">Michelle Appleton</strong>
+                  <div class="data text-2 medium">28 Jun 2020</div>
+               </div>
+             </div>
+             <div id="share2" class="share-btn">
+                <div>
+                  <img src="images/icon-share.svg" alt="share">
+                </div>
+             </div>
+            </div>
+            
+          </footer>
+      </article>
+    </main>
+    <script>
+       const btn = document.getElementById('share2');
+       const banner = document.getElementsByClassName('sharing-banner');
+       const triangle = document.getElementsByClassName('triangle');
+       const element = triangle[0].getElementsByClassName('inside');
+
+       btn.addEventListener('click', openBanner);
+
+       function openBanner(){
+          banner[0].classList.toggle('show');
+          console.log(element);
+          element[0].classList.toggle('show');
+       }
+
+       
+    </script>
+  </body>
+</html>
