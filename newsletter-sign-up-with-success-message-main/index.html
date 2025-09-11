@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div class="container">
+     <!-- Sign-up form start -->
+
+  <div class="sign-up-card active">
+    
+    <div class="sign-up-decoration-image-wp">
+      <picture>
+        <source media="(min-width:1440px)" srcset="assets/images/illustration-sign-up-desktop.svg">
+        <source media="(min-width:768px)" srcset="assets/images/illustration-sign-up-tablet.svg">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-image" height="100%" width="100%">
+      </picture>
+    </div>
+
+    <div class="sign-up-form">
+      <strong>Stay updated!</strong>
+      <p>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+
+      <ul class="checklist">
+        <li>
+          <span>Product discovery and building what matters</span>
+        </li>
+        <li>
+          <span>Measuring to ensure updates are a success</span>
+          </li>
+        <li><span>And much more!</span></li>
+      </ul>
+
+      <form id="newsletterForm">
+        <label for="email" style="display: flex;justify-content: space-between;">
+          <span>Email address</span>
+          <span id="email_error"></span>
+        </label>
+        <input id="email" name="email" type="text" placeholder="email@company.com"/>
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <div class="subscription-confirmation">
+      <img src="assets/images/icon-success.svg">
+      <strong>Thanks for subscribing!</strong>
+      <p>
+        A confirmation email has been sent to
+        <span id="email_to">ash@loremcompany.com</span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button type="button" id="dismiss">Dismiss message</button>
+  </div>
+
+  <!-- Success message end -->
+  </div>
+   <script type="text/javascript">
+      var form = document.getElementById('newsletterForm');
+      var card = document.getElementsByClassName('sign-up-card')[0];
+      var confirmation = document.getElementsByClassName('subscription-confirmation')[0];
+      var dismissBtn = document.getElementById('dismiss');
+
+      function validateEmail(email) {
+        if (!email) return 'Email is required';
+
+        const isValidEmail = /^\S+@\S+$/g
+        if (!isValidEmail.test(email)) {
+          return 'Please enter a valid email';
+        }
+        
+        return '';
+      }
+
+      form.addEventListener('submit', function(event){
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+        const message = validateEmail(data["email"]);
+        const email = data["email"];
+
+        if(message == "")
+        {
+          card.classList.toggle('active');
+          document.getElementById('email_to').innerText = email;
+          confirmation.classList.toggle('active');
+        }else{
+          document.querySelector('#newsletterForm #email').classList.toggle('invalid');
+          document.getElementById('email_error').classList.toggle('invalid');
+          document.getElementById('email_error').innerText = message;
+
+        }
+      });
+
+      dismissBtn.addEventListener('click', function(){
+        confirmation.classList.toggle('active');
+        card.classList.toggle('active');
+      })
+
+   </script>
+</body>
+</html>

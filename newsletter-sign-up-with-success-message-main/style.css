@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sign-up-card{
+    height: 100%;
+    width: 375px;
+    background-color: #ffffff;
+}
+
+.sign-up-decoration-image-wp img{
+    max-height: 284px;
+}
+
+.sign-up-card{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sign-up-form strong{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #242742;
+}
+
+.sign-up-form p, .sign-up-form ul{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #242742;
+}
+
+.sign-up-form p{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.checklist {
+    list-style-type: none;
+    padding: 0; /* Elimina il padding di default */
+}
+
+.checklist li {
+    display: flex; /* Allinea l'icona e il testo su una stessa linea */
+    align-items: center; /* Centra verticalmente l'icona e il testo */
+    margin-bottom: 10px; /* Distanza tra gli elementi */
+}
+
+.checklist li::before {
+    content: "\2713"; /* Carattere di spunta (✔) */
+    font-size: 10px; /* Dimensione dell'icona */
+    color: white; /* Colore dell'icona (puoi cambiare il colore) */
+    margin-right: 10px; /* Distanza tra l'icona e il testo */
+    height: 21px;
+    width: 21px;
+    font-weight: bold;
+    background-color: #FF6155;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.checklist span {
+    font-size: 16px; /* Imposta la dimensione del testo */
+    color: #333; /* Colore del testo */
+}
+
+form{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+form label{
+    margin-bottom: 8px;
+    display: block;
+    color: #242742;
+    font-weight: bold;
+    line-height: 150%;
+    font-size: 12px;
+    letter-spacing: 0px;
+}
+
+input {
+    all: unset; /* Resetta tutti gli stili ereditati */
+    display: block; /* Imposta l'input come elemento block */
+    width: 100%; /* Imposta la larghezza al 100% (opzionale, utile per layout fluidi) */
+    padding: 8px; /* Aggiungi padding per una buona spaziatura interna */
+    margin: 0; /* Elimina il margine */
+    font-size: 16px; /* Imposta una dimensione del font leggibile */
+    background-color: transparent; /* Imposta lo sfondo trasparente */
+    border: 1px solid #ccc; /* Aggiungi un bordo di default (opzionale) */
+    border-radius: 8px; /* Rende gli angoli arrotondati (opzionale) */
+    box-sizing: border-box; /* Include padding e border nella larghezza totale */
+    outline: none; /* Rimuove l'outline di default */
+    height: 56px;
+    color: #949494;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.input:focus {
+    border-color: #007BFF; /* Colore del bordo quando l'input è focalizzato */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Aggiunge un'ombra sottile al focus */
+}
+
+ button{
+    all: unset; /* Rimuove tutti gli stili di default */
+    display: inline-block; /* Mantiene comportamento simile a un button */
+    cursor: pointer; /* Mostra il cursore "mano" */
+    text-align: center; /* Centra il testo */
+    box-sizing: border-box; /* Calcolo dimensioni corretto */
+    font-weight: bold;
+    /* Stili base (opzionali, puoi modificarli) */
+    padding: 8px 16px;
+    font-size: 16px;
+    transition: background-image ease 5s;
+    border-radius: 8px;
+    background-color: #242742;
+    color: #fff;
+    height: 56px;
+    border: 1px solid transparent;
+    width: 100%;
+        margin-top: 20px;
+}
+
+button:hover{
+  background-image: linear-gradient(
+    45deg,
+    hsl(15deg 100% 61%) 0%,
+    hsl(12deg 100% 63%) 8%,
+    hsl(10deg 100% 64%) 17%,
+    hsl(7deg 100% 65%) 25%,
+    hsl(5deg 100% 66%) 33%,
+    hsl(2deg 100% 67%) 42%,
+    hsl(359deg 100% 68%) 50%,
+    hsl(357deg 100% 67%) 58%,
+    hsl(354deg 100% 67%) 67%,
+    hsl(352deg 100% 67%) 75%,
+    hsl(350deg 100% 66%) 83%,
+    hsl(348deg 100% 66%) 92%,
+    hsl(346deg 100% 66%) 100%
+  );
+}
+
+button:focus{
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+.sign-up-form {
+        padding-top: 40px;
+}
+
+.subscription-confirmation {
+    background-color: #ffffff;
+    border-radius: 40px;
+}
+
+.subscription-confirmation, .sign-up-card{
+    display: none;
+}
+
+
+.subscription-confirmation.active, .sign-up-card.active{
+    display: block;
+}
+
+.subscription-confirmation strong{
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #242742;
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 70%;
+}
+
+.subscription-confirmation p{
+    width: 100%;
+    color: #242742;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.subscription-confirmation p > span{
+    font-weight: bold;
+}
+
+#newsletterForm input.invalid{
+    background-color: #FFE7E6;
+    color: #FF6155;
+    border: 2px solid #FF6155;
+}
+
+#email_error{
+    color: #FF6155;
+}
+
+
+
+@media  screen and (min-width:768px) {
+    body{
+        background-color: #36384D;
+    }
+    .sign-up-card{
+        border-radius: 36px;
+        width: 528px;
+        height: 798px;
+    }
+
+    .sign-up-decoration-image-wp img{
+        height: 358px;
+        width: 528px;
+        max-height: unset;
+    }
+
+    .container{
+        align-items: center;
+    }
+
+    .sign-up-card{
+        padding: 40px;
+    }
+
+      .sign-up-form {
+        padding-top: 20px;
+    }
+
+    .subscription-confirmation {
+        width: 424px;
+        height: 440px;
+        padding: 80px;
+    }
+}
+
+@media  screen and (min-width:768px) and (max-width:1400px) {
+  
+}
+
+@media screen and (min-width:1440px)
+{
+    .sign-up-card.active{
+        width: 840px;
+        height: 641px;
+        padding: 32px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sign-up-form {
+        padding-top: 80px;
+        padding-left: 10px;
+        padding-right: 80px;
+    }
+    
+    .sign-up-decoration-image-wp img{
+        width: 400px;
+        height: 593px;
+    }
+}
