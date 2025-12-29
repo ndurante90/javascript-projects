@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/ndurante90/javascript-projects/tree/master/time-tracking-dashboard-main](https://github.com/ndurante90/javascript-projects/tree/master/time-tracking-dashboard-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://time-tracking-dashboard-ochre-alpha.vercel.app/](https://time-tracking-dashboard-ochre-alpha.vercel.app/)
 
 ## My process
 
