@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link href="assets/css/styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div class="time-tracking-dashboard">
+
+    <div class="time-tracking-header">
+        <div class="user-wrp"> 
+          <div class="image-wrp">
+            <img src="images/image-jeremy.png" alt="user-image" />
+          </div>
+          
+          <h1>
+            <span class="report-for rubik-regular">Report for</span>
+            <br>
+            <div class="rubik-light">Jeremy Robson</div>
+          </h1>
+        </div>
+
+        <div class="time-tracking-mode">
+              <button class="rubik-regular"  data-target="daily">Daily</button>
+              <button class="rubik-regular"  data-target="weekly">Weekly</button>
+              <button class="rubik-regular"  data-target="monthly">Monthly</button>
+        </div>
+    </div>
+    
+
+    <div class="time-tracking-activities">
+      <div class="time-tracking-card" id="card-work">
+          <div class="content">
+              <div class="activity-title">
+                <strong class="rubik-medium">Work</strong>
+                <img src="images/icon-ellipsis.svg" alt="immagine-puntini" />
+              </div>
+
+              <div class="activity-length">
+                <strong class="rubik-light">32hrs</strong>
+                <div class="rubik-regular">Previous - 36hrs</div>  
+              </div>
+          </div>
+      </div>
+
+       <div class="time-tracking-card" id="card-play">
+          <div class="content">
+            <div class="activity-title">
+              <strong class="rubik-medium">Play</strong>
+                <img src="images/icon-ellipsis.svg" alt="immagine-puntini" />
+            </div>
+
+
+            <div class="activity-length">
+                <strong class="rubik-light">10hrs</strong>
+                <div class="rubik-regular">Previous - 8hrs</div>  
+            </div>
+          </div>
+        
+
+      </div>
+
+      
+
+      
+       <div class="time-tracking-card" id="card-study">
+          <div class="content">
+            <div class="activity-title">
+              <strong class="rubik-medium">Study</strong>
+               <img src="images/icon-ellipsis.svg" alt="immagine-puntini" />
+            </div>
+
+            <div class="activity-length">
+              <strong class="rubik-light">4hrs</strong>
+              <div class="rubik-regular">Previous - 7hrs</div>  
+            </div>
+
+          </div>
+      </div>
+
+      
+
+      <div class="time-tracking-card" id="card-exercise">
+          <div class="content">
+            
+            <div class="activity-title">
+              <strong class="rubik-medium">Exercise</strong>
+               <img src="images/icon-ellipsis.svg" alt="immagine-puntini" />
+            </div>
+
+  
+            <div class="activity-length">
+                <strong class="rubik-light">4hrs</strong>
+                <div class="rubik-regular">Previous - 5hrs</div>  
+            </div>
+
+          </div>
+      </div>
+
+
+
+      <div class="time-tracking-card" id="card-social">
+          <div class="content">
+             <div class="activity-title">
+              <strong class="rubik-medium">Social</strong>
+               <img src="images/icon-ellipsis.svg" alt="immagine-puntini" />
+            </div>
+
+
+            <div class="activity-length">
+                <strong class="rubik-light">5hrs</strong>
+                <div class="rubik-regular">Previous - 10hrs</div>  
+            </div>
+
+          </div>
+           
+            
+      </div>
+
+      <div class="time-tracking-card" id="card-selfcare">
+        <div class="content">
+           <div class="activity-title">
+            <strong class="rubik-medium">Self Care</strong>
+             <img src="images/icon-ellipsis.svg" alt="immagine-puntini" />
+          </div>
+
+
+          <div class="activity-length">
+              <strong class="rubik-light">2hrs</strong>
+              <div class="rubik-regular">Previous - 2hrs</div>  
+          </div>
+
+        </div>
+         
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

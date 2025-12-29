@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    appearance: none;
+    background-color: transparent;
+}
+
+h1{
+    margin: 0;
+}
+
+body{
+    background-color: #0E1323;
+    color: #FFFFFF;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+/* FONT CLASSES */
+
+.rubik-light {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0px;
+}
+
+.rubik-regular {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-medium {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*** */
+
+.time-tracking-dashboard{
+    max-width: 327px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+.time-tracking-header
+{
+    background-color: #1C204B;
+}
+
+.time-tracking-header {
+      border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #1C204B;
+}
+
+
+
+.time-tracking-header  .user-wrp
+{
+    display: flex;
+    background-color: #5747EA;
+    padding: 32px;
+    border-radius: 15px;
+}
+
+.time-tracking-header .report-for{
+    color: #BBC0FF;
+    font-size: 15px;
+}
+
+.time-tracking-header  .image-wrp
+{
+    width: 64px;
+    height: 64px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.time-tracking-header .image-wrp img{
+    width: 100%;
+    height: 100%;
+}
+
+.time-tracking-header h1 
+{
+    font-size: 1.5rem;
+    margin-left: 24px;
+}
+
+/* BUTTONS */
+
+.time-tracking-header .time-tracking-mode
+{
+    background-color: #1C204B;
+    padding-top: 34px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #1C204B;
+}
+
+.time-tracking-header .time-tracking-mode > button {
+    color: #7078C9;
+    font-size: 18px;
+    flex-basis: 109px;
+    cursor: pointer;
+}
+
+.time-tracking-header .time-tracking-mode > button:hover {
+    color: white;
+}
+
+.time-tracking-header .time-tracking-mode > button.active {
+    color: #FFFFFF;
+}
+
+
+/* CARDS */
+
+.time-tracking-card {
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: top -10px right 20px;
+    margin-top: 24px;
+}
+
+
+.time-tracking-card .content{
+    background-color: #1C204B;
+    margin-top: 12%;
+    display: inline-block;
+    width: 100%;
+    padding: 24px;
+    border-radius: 15px;
+    border-radius: 15px;
+    height: 88%;
+    cursor: pointer;
+}
+
+.time-tracking-card .content:hover {
+     background-color: #33397a;
+}
+
+
+.activity-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-title strong{
+    font-size: 18px;
+}
+
+.activity-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.activity-length strong{
+    font-size: 32px;
+}
+
+.activity-length div {
+    font-size: 15px;
+     color: #BBC0FF;
+}
+
+/* SINGLE CARDS */
+#card-work
+{
+    background-color: #FF8B64;
+    background-image: url(../../images/icon-work.svg);
+}
+
+#card-play{
+    background-color: #55C2E6;
+    background-image: url(../../images/icon-play.svg);
+}
+
+#card-study{
+    background-color: #FF5E7d;
+    background-image: url(../../images/icon-study.svg);
+}
+
+#card-exercise{
+    background-color: #4BCF82;
+    background-image: url(../../images/icon-exercise.svg);
+}
+
+#card-social{
+    background-color: #7335D2;
+    background-image: url(../../images/icon-social.svg);
+}
+
+#card-selfcare{
+    background-color: #F1C75B;
+    background-image: url(../../images/icon-self-care.svg);
+}
+
+
+
+/* Tablet */
+@media all and (min-width: 737px) and (max-width: 1279px) {  }
+
+/* Tablet  */
+
+@media all and (min-width: 481px){
+    .time-tracking-activities
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 24px;
+    }
+
+    .time-tracking-card {
+        margin-top: 0;
+    }
+
+    .time-tracking-dashboard{
+        max-width: 612px;
+        padding-top: 0px;
+    }
+
+    .activity-length {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .activity-length strong{
+        font-size: 3.5rem;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .time-tracking-card .content{
+        margin-top: 52px;
+        height: 200px;
+    }
+}
+
+@media all and (min-width: 768px){
+     .time-tracking-activities
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    body{
+        align-items: center;
+        height: 100vh;
+    }
+
+    
+}
+
+/* Schermi Desktop o Portatili */
+@media all and (min-width: 1280px){
+    .time-tracking-dashboard {
+        display: flex;
+        max-width: 1116px;
+    }
+
+
+
+    .time-tracking-header .user-wrp {
+        display: block;
+        padding-bottom: 90px;
+    }
+
+
+    .time-tracking-header h1 
+    {
+        font-size: 2.5rem;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+
+    .time-tracking-header h1 > div
+    {
+        line-height: 47px;
+    }
+
+
+    .time-tracking-header .time-tracking-mode, .time-tracking-header .time-tracking-mode > button {
+        display: block;
+    }
+
+    .time-tracking-header .time-tracking-mode{
+       margin-bottom: 0px;
+    }
+
+    .time-tracking-mode > button {
+        padding-left: 32px;
+        padding-bottom: 25px;
+    }
+
+    .time-tracking-header{
+        margin-right: 32px;
+        flex-basis: 255px; 
+    }
+
+    .time-tracking-header .time-tracking-mode {
+    
+        padding-bottom: 15px;
+    }
+
+    .time-tracking-activities
+    {
+        gap: 32px;
+        margin-top: 0px;
+    }
+
+    .time-tracking-card{
+        width: 255px;
+    }
+
+    .activity-length{
+        margin-top: 30px;
+    }
+
+     .activity-length strong{
+        margin-bottom: 15px;
+        display: block;
+
+    }
+}
+
