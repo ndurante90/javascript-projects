@@ -1,0 +1,235 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    min-height: 100vh;
+  background: var(--light-grayish-cyan);
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+.main {
+  background: var(--white);
+  width: 100%;
+  max-width: 920px;
+  padding: 32px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.logo {
+  margin-bottom: 48px;
+}
+
+/* =========================
+   LEFT COLUMN
+========================= */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* =========================
+   INPUTS WITH ICON
+========================= */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper img {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px 0 40px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.input-wrapper input::placeholder {
+  color: var(--grayish-cyan);
+}
+
+.input-wrapper input:focus {
+  outline: 2px solid var(--strong-cyan);
+}
+
+/* =========================
+   TIP BUTTON GRID
+========================= */
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tip-grid button,
+.tip-grid input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Buttons */
+.tip-grid button {
+  background: var(--very-dark-cyan);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.tip-grid button:hover,
+.tip-grid button.active {
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+/* Custom input */
+.tip-grid input {
+  background: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  text-align: center;
+}
+
+.tip-grid input::placeholder {
+  color: var(--dark-grayish-cyan);
+}
+
+/* =========================
+   RIGHT COLUMN
+========================= */
+.right {
+  background: var(--very-dark-cyan);
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* =========================
+   RESULTS
+========================= */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-row strong {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.result-row span {
+  font-size: 13px;
+  color: var(--grayish-cyan);
+}
+
+.amount {
+  font-size: 48px;
+  color: var(--strong-cyan);
+}
+
+/* =========================
+   RESET BUTTON
+========================= */
+.reset {
+  margin-top: 32px;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.reset:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+    align-items: start;
+    padding: 24px 0;
+  }
+
+   .logo {
+    margin: 40px auto;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .right {
+    padding: 32px 24px;
+  }
+}
