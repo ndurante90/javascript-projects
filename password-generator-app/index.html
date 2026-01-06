@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assetsmages/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Password generator app</title>
+  
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <main class="container">
+
+    <div class="card">
+      
+      <h1 class="title">Password generator</h1>
+      
+      <!-- FINAL PASSWORD -->
+      
+      <section class="password-result flex-justify">
+        <p id="password">P4$5W0rD!</p>
+        
+        <div>
+          <strong id="password-copied"></strong>
+          <img
+                  id="copy-btn"
+                  src="assets/images/icon-copy.svg"
+                  alt="Copy icon" />
+        </div>
+        
+      </section>
+
+      <!-- PASSWORD CONFIGURATION CARD -->
+      <section class="password-configuration">
+        <!-- RANGE -->
+        <div class="select_car_lenght">
+          <div class="flex-justify">
+            <label class="car_lenght_label" for="car_length_range_input">Character Length</label>
+            <span class="car_length_display">0</span>
+          </div>
+          <input type="range" id="car_length_range_input" class="slider" min="0" max="20" step="1" value="0" />
+        </div>
+
+        <!-- CHECKBOXES -->
+
+        <div class="select_options">
+          <div class="password-option">
+            <input type="checkbox" id="uppercase" data-option="uppercase" />
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+
+          <div class="password-option">
+            <input type="checkbox" id="lowercase" data-option="lowercase" />
+            <label for="lowercase">  Include Lowercase Letters</label>
+          </div>
+
+          <div class="password-option">
+            <input type="checkbox" id="number" data-option="number" />
+            <label for="number"> Include Numbers</label>
+          </div>
+
+          <div class="password-option">
+            <input type="checkbox" id="symbol" data-option="symbol" />
+            <label for="symbol"> Include Symbols</label>
+          </div>
+
+        </div>
+
+        <!-- STRENGHT -->
+        <div class="strength-box">
+          <span>STRENGHT</span>
+          <div class="strenght-wrapper">
+            <span id="strenght_label"></span>
+            <div id="strenght_display">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="generate-btn">
+          <span>GENERATE</span>
+          <img
+                  src="assets/images/icon-arrow-right.svg"
+                  alt=""
+                  class="arrow-icon"
+          />
+        </button>
+        
+      </section>
+      
+    </div>
+    
+
+  </main>
+
+
+<script src="assets/js/slider-script.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
