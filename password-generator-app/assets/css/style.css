@@ -228,17 +228,17 @@ body{
     align-items: center;
 }
 
-#strenght_label{
+#strength_label{
     margin-right: 10px;
     color: var(--white);
 }
 
-#strenght_display{
+#strength_display{
     display: flex;
     gap: 8px;
 } 
 
-#strenght_display > div{
+#strength_display > div{
     width: 10px;
     height: 28px;
     border: 1px solid var(--white);
@@ -291,7 +291,7 @@ body{
     outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
-/* STRENGHT */
+/* strength */
 
 .too-weak {
     color: var(--red500);
@@ -310,31 +310,33 @@ body{
 }
 
 
-.too-weak > #strenght_display > div:nth-child(1) {
+.too-weak > #strength_display > div:nth-child(1) {
     background: var(--red500);
     border-color: var(--red500);
 }
 
-.weak > #strenght_display > div:nth-child(1),
-.weak > #strenght_display > div:nth-child(2) {
+.weak > #strength_display > div:nth-child(1),
+.weak > #strength_display > div:nth-child(2) {
     background: var(--orange400);
     border-color: var(--orange400);
 }
 
-.medium > #strenght_display > div:nth-child(1),
-.medium > #strenght_display > div:nth-child(2),
-.medium > #strenght_display > div:nth-child(3) {
+.medium > #strength_display > div:nth-child(1),
+.medium > #strength_display > div:nth-child(2),
+.medium > #strength_display > div:nth-child(3) {
     background: var(--yellow300);
     border-color: var(--yellow300);
 }
 
-.strong > #strenght_display > div {
+.strong > #strength_display > div {
     background: var(--green200);
     border-color: var(--green200);
 }
 
 #copy-btn{
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 @media screen and

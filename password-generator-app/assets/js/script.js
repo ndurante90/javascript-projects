@@ -6,8 +6,8 @@ const SYMBOLS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)"
 const btn = document.getElementById('generate-btn');
 const checkboxes = Array.from(document.querySelectorAll('.password-option > input[type="checkbox"]'));
 const passwordResult = document.getElementById("password");
-const strengthWrapper = document.getElementsByClassName('strenght-wrapper')[0];
-const strengthLabel = document.getElementById('strenght_label');
+const strengthWrapper = document.getElementsByClassName('strength-wrapper')[0];
+const strengthLabel = document.getElementById('strength_label');
 
 const copyBtn = document.getElementById('copy-btn');
 const passwordCopied = document.getElementById('password-copied');
@@ -58,7 +58,7 @@ const getRandIndex = (n) => {
 
 const renderStrenght = (pwdStrenght) => {
     let strength = Math.round(pwdStrenght);
-    strengthWrapper.classList = 'strenght-wrapper';
+    strengthWrapper.classList = 'strength-wrapper';
     
     let classValue = 'too-weak';
     
@@ -80,8 +80,7 @@ const renderStrenght = (pwdStrenght) => {
     
     if(classValue == "too-weak") classValue += '!';
     strengthLabel.textContent = classValue.replace("-", " ").toUpperCase();
-    
-    console.log(strength);
+
 }
 
 
@@ -98,7 +97,6 @@ const generate = () => {
     }
     
     //WRITE IN DOM
-    console.log(password);
     
     if(password == "")
     {
@@ -109,9 +107,8 @@ const generate = () => {
     }
     passwordResult.textContent = password;
     
-    //CALCULATE STRENGHT
+    //CALCULATE strength
     const pwdStrenght = pwdlength * Math.log2(gammaCaratteri.length)
-    console.log(pwdStrenght);
     renderStrenght(pwdStrenght);
 }
 
@@ -133,8 +130,7 @@ const generatePassword = (ev) => {
 };
 
 const copyToClipboard = () => {
-  
-    console.log(passwordResult)
+    
     if(passwordResult && passwordResult.textContent != "P4$5W0rD!")
     {
         navigator.clipboard.writeText(passwordResult.textContent);
